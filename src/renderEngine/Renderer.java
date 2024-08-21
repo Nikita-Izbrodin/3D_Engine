@@ -3,7 +3,11 @@ package renderEngine;
 import entities.Entity;
 import models.RawModel;
 import models.TexturedModel;
-import org.lwjgl.opengl.*;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL13;
+import org.lwjgl.opengl.GL20;
+import org.lwjgl.opengl.GL30;
 import org.lwjgl.util.vector.Matrix4f;
 import shaders.StaticShader;
 import toolbox.Maths;
@@ -25,7 +29,7 @@ public class Renderer {
 
     public void prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST);
-        GL11.glClearColor(0, 0, 1, 1);
+        GL11.glClearColor(1, 1, 1, 1);
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
     }
 
